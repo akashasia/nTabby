@@ -1,0 +1,11 @@
+{
+    "name": "nTabby New Tab Page",
+    "description": "As simple as possible",
+    "version": "0.1",
+    "permissions" : ["topSites","management","chrome://favicon/"],
+    "chrome_url_overrides" : {
+        "newtab": "newTab.html"
+    },
+
+	"manifest_version": 2
+ }

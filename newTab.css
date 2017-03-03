@@ -1,0 +1,75 @@
+html {
+  /*background-color: #086FA1;*/
+  /*background-color: #ECEBE4;*/
+  background-color: #656565;
+  margin: auto;
+  height: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+body, table{
+  height:100%;
+}
+
+.time {
+  /*color: #3CA0D0;*/
+  color: #D1FFD7;
+  font-weight: bold;
+  text-align: right;
+  font-size: 10em;
+}
+
+#ampm{
+  font-size:0.5em;
+}
+
+#date{
+  font-size:2.5em;
+}
+
+
+#topsites{
+  display: block;
+  overflow: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.subtitle{
+  color : #ccc;
+  font-size:0.8em;
+}
+
+span {
+  /*Display the favicon only once*/
+  background-repeat: no-repeat;
+}
+
+a{
+  display: block;
+  transition: background-color 0.1s ease;
+  /*transition: border-left 0.2s ease;*/
+  padding: 10px;
+  font-size: 1.3em;
+  /*border-left: 2px dashed #3CA0D0;*/
+  border-left: 2px solid #D1FFD7;
+  text-decoration: none;
+  color:#D1FFD7;
+
+  /*Add ellipsis for text thats too long*/
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+a:hover{
+  background: #909792;
+}
+
+
+
