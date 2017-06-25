@@ -1,20 +1,28 @@
 html {
-  /*background-color: #086FA1;*/
-  /*background-color: #ECEBE4;*/
-  background-color: #656565;
+  --main-bg-color: rgb(100,143,168);
+  --gradient-end-color : rgb(77,70,75);
+  --left-border-color : #eee;
+  --text-main-color : #e5e5e5;
+  --text-secondary-color : #bebebe;
+  --hover-color : rgba(250,250,250,0.1);
+  --hover-text-main : #000;
+  --hover-text-secondary : #000;
+
+  /*background-color: var(--main-bg-color);*/
+  background-image: -webkit-linear-gradient(top, var(--main-bg-color),var(--gradient-end-color));
   margin: auto;
   height: 100%;
   vertical-align: middle;
   white-space: nowrap;
+  color : var(--text-main-color);
 }
 
 body, table{
   height:100%;
+  overflow: hidden;
 }
 
 .time {
-  /*color: #3CA0D0;*/
-  color: #D1FFD7;
   font-weight: bold;
   text-align: right;
   font-size: 10em;
@@ -38,10 +46,15 @@ ul {
   list-style-type: none;
 }
 
-.subtitle{
-  color : #ccc;
-  font-size:0.8em;
+a .subtitle{
+  color : var(--text-secondary-color);
+  font-size:0.85em;
+  font-style: italic; 
 }
+
+/*.subtitle:hover  {
+  color : var(--hover-text-secondary);
+}*/
 
 span {
   /*Display the favicon only once*/
@@ -53,22 +66,22 @@ a{
   transition: background-color 0.1s ease;
   /*transition: border-left 0.2s ease;*/
   padding: 10px;
-  font-size: 1.3em;
-  /*border-left: 2px dashed #3CA0D0;*/
-  border-left: 2px solid #D1FFD7;
+  font-size: 1.35em;
+  border-left: 2px solid var(--left-border-color);
   text-decoration: none;
-  color:#D1FFD7;
-
+  color : var(--text-main-color);
   /*Add ellipsis for text thats too long*/
   width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
+
 }
 
 a:hover{
-  background: #909792;
+  background: var(--hover-color);
+  /*color: var(--hover-text-main);*/
 }
 
 
