@@ -76,8 +76,6 @@ span {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 24px;
-
-
 }
 
 .listlink:hover{
@@ -85,8 +83,17 @@ span {
   /*color: var(--hover-text-main);*/
 }
 
-appsbar{
-  background: none;
+.appsbar{
+  padding: 10px;
+  font-size: 1.5em;
+  z-index: 1;
+  position: absolute;
+}
+
+.appsbar a{
+  text-decoration: none;
+  color : var(--text-main-color);
+
 }
 
 
