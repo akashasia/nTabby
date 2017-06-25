@@ -13,6 +13,7 @@ function thumbnailsGotten(data) {
 		// Create each line item
 		cList.append($('<li>').append($('<div>').append($('<a>')
 				.attr('href', data[i].url)
+				.attr('class', 'listlink')
 				.append($('<span>')
 				.css('background-image', favicon)
 				.css('padding-left','24px')) 

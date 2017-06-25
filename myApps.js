@@ -1,18 +1,14 @@
-
-// window.onload = function() {
-// 	chrome.topSites.get(thumbnailsGotten);
-// 	var date = new Date().toDateString();
-// 	document.getElementById("date").textContent = date.slice(0,-4);
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
   chrome.management.getAll(getAllCallback);
 });
 
 var getAllCallback = function (list) {
   var apps = document.getElementById("apps");
+  list.sort(function(a,b) {
+    return (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name.toLowerCase() > a.name.toLowerCase()) ? -1 : 0);
+  }); 
+
   for (var i in list) {
-    // we don't want to do anything with extensions yet.
     var extInf = list[i];
     if (extInf.isApp && extInf.enabled) {
       var app = document.createElement("div");
