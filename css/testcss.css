@@ -1,10 +1,24 @@
-@import url("common.css");
+html {
+  --main-bg-color: rgb(100,143,168);
+  --gradient-end-color : rgb(77,70,75);
+  --left-border-color : #eee;
+  --text-main-color : #e5e5e5;
+  --text-secondary-color : #bebebe;
+  --hover-color : rgba(250,250,250,0.1);
+  --hover-text-main : #000;
+  --hover-text-secondary : #000;
 
-html{
+  /*background-color: var(--main-bg-color);*/
+  background-image: -webkit-linear-gradient(top, var(--main-bg-color),var(--gradient-end-color));
+  margin: auto;
+  height: 100%;
+  vertical-align: middle;
   white-space: nowrap;
+  color : var(--text-main-color);
 }
 
 body, table{
+  height:100%;
   overflow: hidden;
 }
 
@@ -67,6 +81,20 @@ span {
 .listlink:hover{
   background: var(--hover-color);
   /*color: var(--hover-text-main);*/
+}
+
+.appsbar{
+  background-color: black;
+  padding: 10px;
+  font-size: 1.5em;
+  z-index: 1;
+  position: absolute;
+}
+
+.appsbar a{
+  text-decoration: none;
+  color : var(--text-main-color);
+
 }
 
 

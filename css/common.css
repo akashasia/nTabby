@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('font-awesome.min.css');
+
+html {
+
+  --main-bg-color : #f5f5f5;
+  /*--gradient-end-color : rgb(77,70,75);*/
+  --left-border-color : #302f2f;
+  --text-main-color : #302f2f;
+  --text-secondary-color : #696969;
+  --hover-color : #c2c2c2;
+  --hover-text-main : #000;
+  --hover-text-secondary : #000;
+
+  background-color: var(--main-bg-color);
+  /*background-image: -webkit-linear-gradient(top, var(--main-bg-color),var(--gradient-end-color));*/
+  margin: auto;
+  height: 100%;
+  vertical-align: middle;
+  /*white-space: nowrap;*/
+  color : var(--text-main-color);
+}
+
+body, table{
+  font-family: 'Oxygen', sans-serif;
+  height:100%;
+}
+
+.topleftbutton{
+    padding: 10px;
+    font-size: 1.5em;
+    z-index: 1;
+    position: absolute;
+}
+
+.topleftbutton a{
+  text-decoration: none;
+  color : var(--text-main-color);
+}
+
+.topleftbutton:hover{
+    background-color: var(--hover-color);
+}
+
+
