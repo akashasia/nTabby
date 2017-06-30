@@ -49,12 +49,13 @@ span {
 
 .listlink{
   display: block;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.3s ease;
   /*transition: border-left 0.2s ease;*/
   padding: 10px;
   font-size: 1.35em;
   border-left: 2px solid var(--left-border-color);
   text-decoration: none;
+  /*font-weight: bold;*/
   color : var(--text-main-color);
   /*Add ellipsis for text thats too long*/
   width: 80%;

@@ -45,6 +45,12 @@ window.onload = function() {
 	document.getElementById("date").textContent = date.slice(0,-4);
 }
 
+chrome.identity.getProfileUserInfo(function(userInfo) {
+ /* Use userInfo.email, or better (for privacy) userInfo.id
+    They will be empty if user is not signed in in Chrome */
+	console.log(userInfo)
+});
+
 function startTime() {
 	var d = new Date();
 	var n = d.toLocaleTimeString();
