@@ -25,7 +25,6 @@ html {
 
   background-color: var(--main-bg-color);
   /*background-image: -webkit-linear-gradient(top, var(--main-bg-color),var(--gradient-end-color));*/
-  margin: auto;
   height: 100%;
   vertical-align: middle;
   /*white-space: nowrap;*/

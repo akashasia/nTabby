@@ -4,6 +4,7 @@
 body {
     height: 100%;
     width: 100%;
+    margin : 0px;
     /*vertical-align: middle;*/
 }   
 
@@ -39,8 +40,10 @@ body {
 .name{
     /*margin:10px;*/
     /*height:20%;*/
+    /*height:100%;*/
     margin-top: 10px;
-    text-align: center;
+    text-align: center;    
+
 }
 .wrapper {
     text-align: center;
@@ -59,3 +62,8 @@ body {
     display: inline-block;  
     width: 100%;
 }
+
+.topleftbutton{
+    margin: 8px;
+}
+

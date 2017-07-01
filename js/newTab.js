@@ -7,6 +7,7 @@ function thumbnailsGotten(data) {
 
 	// Loop through the top 10 most visited sites
 	$.each(data.slice(0, 10), function(i) {
+
 		// Fetch the favicon
 		var favicon = 'url(chrome://favicon/' + data[i].url +')';
 
@@ -18,21 +19,11 @@ function thumbnailsGotten(data) {
 				.css('background-image', favicon)
 				.css('padding-left','24px')) 
 			.append(data[i].title)
-			.append($('<div>').attr('class','subtitle').append(data[i].url)
+			.append($('<div>')
+				.attr('class','subtitle')
+			.append(data[i].url)
 				))));
 	});	
-
-	// -- older code | lacks the subtitle --
-	// $.each(data.slice(0, 10), function(i) {
-	// 	var favicon = 'url(chrome://favicon/' + data[i].url +')';
-	// 	cList.append($('<li>').append($('<a>')
-	// 			.attr('href', data[i].url)
-	// 			.append($('<span>')
-	// 			.css('background-image', favicon)
-	// 			.css('padding-left','24px') //.attr('class', 'tab')
-	// 		.append(data[i].title))));
-	// });
-
 }
 window.onload = function() {
 	// Tell chrome to give us the top sites
@@ -43,13 +34,26 @@ window.onload = function() {
 
 	// Set the date
 	document.getElementById("date").textContent = date.slice(0,-4);
+
+	var bookmarkTreeNodes = chrome.bookmarks.getTree(
+		function(bookmarkTreeNodes) {
+		console.log(bookmarkTreeNodes);
+		traverseBookmarks(bookmarkTreeNodes);
+		});
+
 }
 
-chrome.identity.getProfileUserInfo(function(userInfo) {
- /* Use userInfo.email, or better (for privacy) userInfo.id
-    They will be empty if user is not signed in in Chrome */
-	console.log(userInfo)
-});
+function traverseBookmarks(bookmarkTreeNodes) {
+    for(var i=0;i<bookmarkTreeNodes.length;i++) {
+        console.log(bookmarkTreeNodes[i].title, bookmarkTreeNodes[i].url ? bookmarkTreeNodes[i].url : "[Folder]");
+
+        if(bookmarkTreeNodes[i].children) {
+            traverseBookmarks(bookmarkTreeNodes[i].children);
+        } 
+
+    }
+}
+
 
 function startTime() {
 	var d = new Date();
